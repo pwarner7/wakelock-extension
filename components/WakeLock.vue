@@ -72,7 +72,7 @@ async function isWakeLocked(): Promise<boolean> {
     <img class="lock" :src=imgSrc :alt=imgAlt @click="toggleWakelock">
   </div>
   <div>
-    <button @click="toggleWakelock">{{ buttonText }}</button>
+    <button class="toggle" @click="toggleWakelock">{{ buttonText }}</button>
   </div>
   <p class="icon8">
     <a target="_blank" href="https://icons8.com/icon/sPUcnHvQaL0L/padlock" class="">Padlock</a> icon
@@ -96,6 +96,10 @@ async function isWakeLocked(): Promise<boolean> {
   .lock:active {
     padding-bottom: 15px;
     width: 100px;
+  }
+
+  .toggle {
+    width: 11em;
   }
 
   .icon8 {
