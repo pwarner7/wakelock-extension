@@ -73,8 +73,15 @@ const dUpdateReleaseTime = debounce(updateRelaseTime, 500);
 
 <template>
   <input type="checkbox" name="enable" id="enable" v-model="enabled">
-  <label for="enable">Release automatically</label>
+  <label for="enable">Release wakelock at...</label>
   <div v-if="enabled">
-    <input type="time" name="release-time" id="release-time" v-model="releaseTime">
+    <input class="time" type="time" name="release-time" id="release-time" v-model="releaseTime">
   </div>
 </template>
+
+<style scoped>
+  .time {
+    border-radius: 4px;
+    border: 1px solid #646cff;
+  }
+</style>
