@@ -2,6 +2,7 @@
 import { ref } from 'vue';
 import lock_open from '~/assets/lock_open.png';
 import lock_closed from '~/assets/lock_closed.png';
+import AutomaticRelease from './AutomaticRelease.vue';
 
 const WAKELOCK_ACQUIRE = "Acquire wakelock";
 const WAKELOCK_RELEASE = "Release wakelock";
@@ -73,6 +74,9 @@ async function isWakeLocked(): Promise<boolean> {
   </div>
   <div>
     <button class="toggle" @click="toggleWakelock">{{ buttonText }}</button>
+  </div>
+  <div>
+    <AutomaticRelease />
   </div>
   <p class="icon8">
     <a target="_blank" href="https://icons8.com/icon/sPUcnHvQaL0L/padlock" class="">Padlock</a> icon
