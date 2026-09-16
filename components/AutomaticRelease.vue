@@ -29,7 +29,6 @@ watch(enabled, async (isEnabled) => {
 });
 
 watch(releaseTime, async (releaseTime) => {
-  console.log(releaseTime);
   dUpdateReleaseTime(releaseTime);
 });
 
@@ -60,7 +59,6 @@ function updateRelaseTime(releaseTime: string | undefined) {
     return;
   }
 
-  console.log("sending setReleaseTime");
   browser.runtime.sendMessage({
     action: "setReleaseTime",
     time: hour * 60 + minute,

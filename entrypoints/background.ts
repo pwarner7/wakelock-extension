@@ -104,7 +104,6 @@ function handleSetReleaseTime(m: Message) {
 }
 
 async function checkAutoRelease() {
-  console.log("checkAutoRelease");
   let now = getMinuteTimestamp(new Date());
 
   // Get the last time we checked, then update it
