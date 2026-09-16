@@ -69,7 +69,7 @@ async function isWakeLocked(): Promise<boolean> {
   <link rel="prefetch" :href=lock_closed hidden />
 
   <div>
-    <img :src=imgSrc :alt=imgAlt width="100">
+    <img class="lock" :src=imgSrc :alt=imgAlt @click="toggleWakelock">
   </div>
   <div>
     <button @click="toggleWakelock">{{ buttonText }}</button>
@@ -81,6 +81,23 @@ async function isWakeLocked(): Promise<boolean> {
 </template>
 
 <style scoped>
+  .lock {
+    cursor: pointer;
+    padding-bottom: 15px;
+    width: 100px;
+    transition: width 0.25s, padding-bottom 0.25s;
+  }
+
+  .lock:hover {
+    padding-bottom: 5px;
+    width: 110px;
+  }
+
+  .lock:active {
+    padding-bottom: 15px;
+    width: 100px;
+  }
+
   .icon8 {
     font-size: x-small;
     margin: 0.25em;
