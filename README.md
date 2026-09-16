@@ -1,0 +1,1 @@
+A simple extension to acquire and release wakelock to prevent your computer from going to sleep.
