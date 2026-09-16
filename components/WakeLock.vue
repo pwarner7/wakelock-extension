@@ -65,6 +65,9 @@ async function isWakeLocked(): Promise<boolean> {
 </script>
 
 <template>
+  <link rel="prefetch" :href=lock_open hidden />
+  <link rel="prefetch" :href=lock_closed hidden />
+
   <div>
     <img :src=imgSrc :alt=imgAlt width="100">
   </div>
